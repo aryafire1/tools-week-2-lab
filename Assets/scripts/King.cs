@@ -8,10 +8,13 @@ public class King : MonoBehaviour
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.blue;
 
-        Gizmos.DrawLine(transform.position, new Vector2(3,1));
-        Gizmos.DrawLine(transform.position, new Vector2(3,2));
-        Gizmos.DrawLine(transform.position, new Vector2(4,2));
-        Gizmos.DrawLine(transform.position, new Vector2(6,2));
-        Gizmos.DrawLine(transform.position, new Vector2(6,1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x - 1,transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x,transform.position.y + 1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 1, transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x,transform.position.y - 1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x-1,transform.position.y - 1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 1,transform.position.y + 1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x-1,transform.position.y + 1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 1,transform.position.y - 1));
     }
 }

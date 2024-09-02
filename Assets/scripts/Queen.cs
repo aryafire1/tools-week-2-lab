@@ -7,11 +7,14 @@ public class Queen : MonoBehaviour
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.blue;
 
-        Gizmos.DrawLine(transform.position, new Vector2(0,1));
-        Gizmos.DrawLine(transform.position, new Vector2(0,4));
-        Gizmos.DrawLine(transform.position, new Vector2(3,8));
-        Gizmos.DrawLine(transform.position, new Vector2(8,4));
-        Gizmos.DrawLine(transform.position, new Vector2(8,1));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x - 2,transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x,transform.position.y + 2));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 2, transform.position.y));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x,transform.position.y - 2));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x-2,transform.position.y - 2));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 2,transform.position.y + 2));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x-2,transform.position.y + 2));
+        Gizmos.DrawLine(transform.position, new Vector2(transform.position.x + 2,transform.position.y - 2));
     }
 }
 
